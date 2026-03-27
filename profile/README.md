@@ -32,6 +32,7 @@ These aren't marketing claims. The source is here.
 |---|---|
 | **[polyphon](https://github.com/polyphon-ai/polyphon)** | Core Electron desktop app — TypeScript, React, SQLCipher |
 | **[obsidian-polyphon](https://github.com/polyphon-ai/obsidian-polyphon)** | Obsidian plugin — multi-voice AI conversations inside your vault |
+| **[vscode-polyphon](https://github.com/polyphon-ai/vscode-polyphon)** | VS Code extension — multi-voice AI conversations with code context awareness |
 | **[polyphon-js](https://github.com/polyphon-ai/polyphon-js)** | JavaScript/TypeScript SDK — connect to Polyphon from your own code |
 | **[polyphon-ai.github.io](https://github.com/polyphon-ai/polyphon-ai.github.io)** | Source for [polyphon.ai](https://polyphon.ai) — Hugo site with docs and blog |
 
