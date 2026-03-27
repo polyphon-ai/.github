@@ -1,0 +1,68 @@
+name: Bug report
+description: Something isn't working correctly
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check the [existing issues](../../issues) before opening a new one to avoid duplicates.
+
+        > **Security issue?** Do not file a public issue — see [SECURITY.md](../../security/policy) instead.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen instead.
+      placeholder: |
+        What I did: ...
+        What happened: ...
+        What I expected: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps to reliably reproduce the issue.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Version of the Polyphon project where you encountered the bug.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: polyphon-version
+    attributes:
+      label: Polyphon version
+      description: Version of the Polyphon desktop app (if applicable).
+      placeholder: "0.13.0"
+    validations:
+      required: false
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "macOS 15.3"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, logs, or anything else that might help.
+    validations:
+      required: false

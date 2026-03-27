@@ -1,0 +1,41 @@
+name: Feature request
+description: Suggest a new feature or improvement
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Not sure if it's a feature request? Start a [Discussion](https://github.com/orgs/polyphon-ai/discussions) instead — it's a great place to explore ideas with the community before filing a formal request.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the situation or workflow that this would improve. Focus on the problem, not the solution.
+      placeholder: I often find myself trying to... but currently I have to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What would you like to see? How would it work?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+      description: Any workarounds or other approaches you've tried or thought about.
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Mockups, examples from other tools, or anything else that helps illustrate the request.
+    validations:
+      required: false
