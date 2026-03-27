@@ -1,24 +1,39 @@
 # polyphon-ai — CLAUDE.md
 
-This directory contains three related repositories for the Polyphon project. Each has its own `CLAUDE.md` with project-specific details. This file describes how the projects relate to each other.
+This directory contains the related repositories for the Polyphon project. Each has its own `CLAUDE.md` with project-specific details. This file describes how the projects relate to each other.
 
 ## Projects
 
 | Repository | Purpose | Stack |
 |---|---|---|
 | [`polyphon/`](./polyphon/) | Core Electron desktop app | TypeScript, React 19, Electron 41, SQLCipher |
+| [`polyphon-js/`](./polyphon-js/) | JavaScript/TypeScript SDK | TypeScript, Node.js, published as `@polyphon-ai/js` |
 | [`obsidian-polyphon/`](./obsidian-polyphon/) | Obsidian plugin client | TypeScript, Obsidian Plugin API |
+| [`vscode-polyphon/`](./vscode-polyphon/) | VS Code extension | TypeScript, VS Code Extension API |
 | [`polyphon-ai.github.io/`](./polyphon-ai.github.io/) | Marketing and docs website | Hugo, deployed to polyphon.ai |
 
 ## How They Interact
 
-### polyphon ↔ obsidian-polyphon (API contract)
+### polyphon → polyphon-js (SDK sync)
 
-`polyphon` exposes a **JSON-RPC 2.0 TCP API** on port 7432 (default). The Obsidian plugin connects to this socket and calls methods to authenticate, list compositions, manage sessions, and stream voice responses.
+`polyphon` is the **complete source of truth** for everything in `polyphon-js/src/`. On each Polyphon release, the `sync-sdk.yml` workflow copies all SDK files to `polyphon-js`, bumps the SDK version to match, and publishes `@polyphon-ai/js` to npm.
 
-The type definitions in `obsidian-polyphon/src/types.ts` **manually mirror** `polyphon/src/shared/api.ts` and `polyphon/src/shared/types.ts`. When the Polyphon API changes, both files must be updated.
+| polyphon source | polyphon-js destination |
+|---|---|
+| `src/shared/types.ts`, `src/shared/api.ts` | `src/types.ts`, `src/api.ts` |
+| `src/sdk/client.ts`, `errors.ts`, `token.ts`, `index.ts` | `src/client.ts`, etc. |
+| `src/sdk/testing/` | `src/testing/` |
+| `src/sdk/**/*.test.ts` | `src/**/*.test.ts` |
 
-Key API methods used by the plugin:
+SDK tests run in polyphon CI first (against the real server implementation) before syncing, ensuring correctness before each publish.
+
+### polyphon ↔ obsidian-polyphon / vscode-polyphon (API contract)
+
+`polyphon` exposes a **JSON-RPC 2.0 TCP API** on port 7432 (default). Both the Obsidian plugin and VS Code extension connect to this socket and call methods to authenticate, list compositions, manage sessions, and stream voice responses.
+
+Both clients import types directly from `@polyphon-ai/js`, keeping them in sync with the SDK automatically. Sessions created by each client are tagged with a `source` field (`"obsidian"` or `"vscode"`) so each client only surfaces its own sessions in its UI.
+
+Key API methods:
 
 | Method | Purpose |
 |---|---|
@@ -39,32 +54,36 @@ On each Polyphon release, the `update-download-version.yml` GitHub Actions workf
 
 Direct site edits (docs, roadmap, theme changes) are committed to `polyphon-ai.github.io` independently.
 
-### polyphon-ai.github.io → polyphon/obsidian-polyphon (documentation)
+### polyphon-ai.github.io → polyphon/obsidian-polyphon/vscode-polyphon (documentation)
 
-The site hosts all user-facing documentation for both projects:
+The site hosts all user-facing documentation for all client projects:
 - `content/docs/polyphon/` — main app docs
-- `content/docs/integrations/obsidian-polyphon/` — plugin docs
+- `content/docs/integrations/obsidian-polyphon/` — Obsidian plugin docs
+- `content/docs/integrations/vscode-polyphon/` — VS Code extension docs
 - `content/docs/for-developers/api.md` — full JSON-RPC API reference
 - `content/docs/for-developers/mcp.md` — MCP server docs
 
-When API contracts or features change in either project, update the relevant docs here.
+When API contracts or features change in any project, update the relevant docs here.
 
 ## Cross-Project Workflows
 
 ### Adding a new API method to polyphon
 1. Implement in `polyphon/src/main/api/`
 2. Add types to `polyphon/src/shared/api.ts`
-3. If the Obsidian plugin will use the method, mirror types in `obsidian-polyphon/src/types.ts`
-4. Update `polyphon-ai.github.io/content/docs/for-developers/api.md`
+3. Update `MockPolyphonServer` in `polyphon/src/sdk/testing/MockPolyphonServer.ts` to handle the new method
+4. Add tests in `polyphon/src/sdk/client.test.ts`
+5. On release, `sync-sdk.yml` automatically syncs everything to `polyphon-js` and publishes
+6. Update `polyphon-ai.github.io/content/docs/for-developers/api.md`
 
 ### Releasing a new version
 1. Bump version in `polyphon` with `make bump-version VERSION=x.y.z`
 2. Run `release.yml` — signs, notarizes, and publishes the macOS DMG
 3. Run `update-download-version.yml` — updates the site and creates the release blog post
 
-### Updating plugin or app documentation
-- Plugin docs: `polyphon-ai.github.io/content/docs/integrations/obsidian-polyphon/`
+### Updating client documentation
 - App docs: `polyphon-ai.github.io/content/docs/polyphon/`
+- Obsidian plugin docs: `polyphon-ai.github.io/content/docs/integrations/obsidian-polyphon/`
+- VS Code extension docs: `polyphon-ai.github.io/content/docs/integrations/vscode-polyphon/`
 - API reference: `polyphon-ai.github.io/content/docs/for-developers/api.md`
 
 ## Default Ports

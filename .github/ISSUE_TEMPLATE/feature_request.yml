@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Not sure if it's a feature request? Start a [Discussion](https://github.com/orgs/polyphon-ai/discussions) instead — it's a great place to explore ideas with the community before filing a formal request.
+        Not sure if it's a feature request? Start a [Discussion](https://github.com/polyphon-ai/.github/discussions) instead — it's a great place to explore ideas with the community before filing a formal request.
 
   - type: textarea
     id: problem

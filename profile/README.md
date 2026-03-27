@@ -47,7 +47,7 @@ These aren't marketing claims. The source is here.
 ### Get involved
 
 - **[Open an issue](https://github.com/polyphon-ai/polyphon/issues)** — bug reports and feature requests
-- **[Join a discussion](https://github.com/polyphon-ai/polyphon/discussions)** — questions, ideas, show and tell
+- **[Join a discussion](https://github.com/polyphon-ai/.github/discussions)** — questions, ideas, show and tell
 - **[GitHub Sponsors](https://github.com/sponsors/coreydaley)** — support development directly
 
 ---
