@@ -53,4 +53,4 @@ These aren't marketing claims. The source is here.
 
 ---
 
-Apache 2.0 · [polyphon.ai](https://polyphon.ai) · [![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/PolyphonAI)
+Apache 2.0 · [polyphon.ai](https://polyphon.ai) · [![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/intent/follow?screen_name=PolyphonAI)
