@@ -10,7 +10,7 @@
 
 <br><br>
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/polyphon-ai/polyphon/blob/main/LICENSE) [![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/intent/follow?screen_name=PolyphonAI)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/polyphon-ai/polyphon/blob/main/LICENSE) [![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/intent/follow?screen_name=PolyphonAI) [![GitHub Sponsors](https://img.shields.io/github/sponsors/coreydaley?logo=githubsponsors&logoColor=white&color=EA4AAA)](https://github.com/sponsors/coreydaley)
 
 <br>
 
@@ -30,23 +30,29 @@ Polyphon is a free, open source desktop app for orchestrating conversations betw
 
 ---
 
-### Supports every kind of voice
+<h3 align="center">All your voices, in one conversation</h3>
 
-| | Providers |
-|---|---|
-| **API** | Anthropic Claude · OpenAI GPT · Google Gemini |
-| **CLI** | Claude Code · Codex · GitHub Copilot |
-| **Local / custom** | Ollama · LM Studio · any OpenAI-compatible endpoint |
+| 🔑 API | 💻 CLI | 🏠 Local / custom |
+|:---:|:---:|:---:|
+| Anthropic Claude · OpenAI GPT · Google Gemini | Claude Code · Codex · GitHub Copilot | Ollama · LM Studio · any OpenAI-compatible endpoint |
 
 ---
 
-### Local-first. No telemetry. No account.
+<h3 align="center">Your data. Your machine. Your rules.</h3>
 
 | 🔒 Local-first | 🚫 No telemetry | 👤 No account |
 |:---:|:---:|:---:|
 | Sessions and compositions live on your machine, encrypted at rest | Never phones home — no usage data, no analytics, no exceptions | No sign-up required. No usage cap from us — you pay your API providers directly |
 
 API keys are read from your shell environment and never leave the main process. These aren't marketing claims. The source is here.
+
+---
+
+<h3 align="center">Built for developers</h3>
+
+| 🔌 SDK & TCP API | 🤖 MCP Server |
+|:---:|:---:|
+| A built-in JSON-RPC 2.0 API server lets you control Polyphon programmatically. The [`@polyphon-ai/js`](https://github.com/polyphon-ai/polyphon-js) SDK and `poly` CLI let you create sessions, run prompts, and stream responses from any script or CI pipeline. | Use Polyphon as a tool inside your agent workflows. Claude Code, Cursor, Codex CLI, and GitHub Copilot can list compositions, create sessions, and broadcast questions to your full ensemble — synchronously, over stdio. |
 
 ---
 
