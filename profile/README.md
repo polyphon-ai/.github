@@ -4,11 +4,11 @@
 
 **One chat. Many voices.**
 
-![Polyphon screenshot](media/screenshot.png)
-
 Polyphon is a free, open source desktop app for orchestrating conversations between multiple AI models simultaneously. You send a message — every voice in the session responds, reads each other's replies, and builds on what came before.
 
 A critic and a builder. A cloud model and a local one. Running together, in the same conversation.
+
+![Polyphon screenshot](media/screenshot.png)
 
 ---
 
