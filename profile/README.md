@@ -1,5 +1,7 @@
 # Polyphon
 
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/polyphon-ai/polyphon/blob/main/LICENSE) [![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/intent/follow?screen_name=PolyphonAI)
+
 **One chat. Many voices.**
 
 Polyphon is a free, open source desktop app for orchestrating conversations between multiple AI models simultaneously. You send a message — every voice in the session responds, reads each other's replies, and builds on what came before.
@@ -53,4 +55,4 @@ These aren't marketing claims. The source is here.
 
 ---
 
-Apache 2.0 · [polyphon.ai](https://polyphon.ai) · [![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/intent/follow?screen_name=PolyphonAI)
+Apache 2.0 · [polyphon.ai](https://polyphon.ai)
