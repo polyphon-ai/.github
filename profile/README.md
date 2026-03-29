@@ -44,7 +44,7 @@ Polyphon is a free, open source desktop app for orchestrating conversations betw
 |:---:|:---:|:---:|
 | Sessions and compositions live on your machine, encrypted at rest | Never phones home — no usage data, no analytics, no exceptions | No sign-up required. No usage cap from us — you pay your API providers directly |
 
-API keys are read from your shell environment and never leave the main process. These aren't marketing claims. The source is here.
+<p align="center"><strong>Don't take our word for it — the source is public.</strong></p>
 
 ---
 
