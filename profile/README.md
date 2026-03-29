@@ -1,20 +1,38 @@
-# Polyphon
+<div align="center">
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="media/wordmark-light.svg">
+  <source media="(prefers-color-scheme: light)" srcset="media/wordmark-dark.svg">
+  <img src="media/wordmark-dark.svg" alt="Polyphon" height="60">
+</picture>
+
+<br><br>
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/polyphon-ai/polyphon/blob/main/LICENSE) [![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/intent/follow?screen_name=PolyphonAI)
+
+<br>
 
 **One chat. Many voices.**
 
 Polyphon is a free, open source desktop app for orchestrating conversations between multiple AI models simultaneously. You send a message — every voice in the session responds, reads each other's replies, and builds on what came before.
 
-A critic and a builder. A cloud model and a local one. Running together, in the same conversation.
+*A critic and a builder. A cloud model and a local one. Running together, in the same conversation.*
 
-![Polyphon screenshot](media/screenshot.png)
+<br>
+
+<img src="media/screenshot.png" width="840" alt="Polyphon screenshot" />
+
+<br>
+
+</div>
 
 ---
 
 ### Supports every kind of voice
 
-| Type | Providers |
+| | Providers |
 |---|---|
 | **API** | Anthropic Claude · OpenAI GPT · Google Gemini |
 | **CLI** | Claude Code · Codex · GitHub Copilot |
@@ -24,9 +42,11 @@ A critic and a builder. A cloud model and a local one. Running together, in the 
 
 ### Local-first. No telemetry. No account.
 
-Your sessions and compositions live on your machine, encrypted at rest. API keys are read from your shell environment and never leave the main process. There is no backend. There is no usage cap from us — you pay your API providers directly.
+| 🔒 Local-first | 🚫 No telemetry | 👤 No account |
+|:---:|:---:|:---:|
+| Sessions and compositions live on your machine, encrypted at rest | Never phones home — no usage data, no analytics, no exceptions | No sign-up required. No usage cap from us — you pay your API providers directly |
 
-These aren't marketing claims. The source is here.
+API keys are read from your shell environment and never leave the main process. These aren't marketing claims. The source is here.
 
 ---
 
@@ -47,14 +67,8 @@ These aren't marketing claims. The source is here.
 - **[Download Polyphon](https://polyphon.ai/#download)** — macOS, free
 - **[Documentation](https://polyphon.ai/docs/)** — installation, providers, sessions
 - **[Roadmap](https://polyphon.ai/roadmap/)** — what's shipped and what's coming
-- **[Releases](https://github.com/polyphon-ai/polyphon/releases)** — changelog and release notes
 
 ### Get involved
 
-- **[Open an issue](https://github.com/polyphon-ai/polyphon/issues)** — bug reports and feature requests
 - **[Join a discussion](https://github.com/polyphon-ai/.github/discussions)** — questions, ideas, show and tell
 - **[GitHub Sponsors](https://github.com/sponsors/coreydaley)** — support development directly
-
----
-
-Apache 2.0 · [polyphon.ai](https://polyphon.ai)
