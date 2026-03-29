@@ -10,10 +10,6 @@
 
 <br><br>
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/polyphon-ai/polyphon/blob/main/LICENSE) [![Follow on X](https://img.shields.io/badge/Follow-%40PolyphonAI-000?logo=x&logoColor=white)](https://x.com/intent/follow?screen_name=PolyphonAI) [![GitHub Sponsors](https://img.shields.io/github/sponsors/coreydaley?logo=githubsponsors&logoColor=white&color=EA4AAA)](https://github.com/sponsors/coreydaley)
-
-<br>
-
 **One chat. Many voices.**
 
 Polyphon is a free, open source desktop app for orchestrating conversations between multiple AI models simultaneously. You send a message — every voice in the session responds, reads each other's replies, and builds on what came before.
@@ -26,11 +22,15 @@ Polyphon is a free, open source desktop app for orchestrating conversations betw
 
 <br>
 
+[![Download](https://img.shields.io/badge/Download-macOS%2C_free-black?logo=apple&logoColor=white)](https://polyphon.ai/#download) [![Documentation](https://img.shields.io/badge/Documentation-polyphon.ai-black?logo=gitbook&logoColor=white)](https://polyphon.ai/docs/) [![Roadmap](https://img.shields.io/badge/Roadmap-polyphon.ai-black?logo=github&logoColor=white)](https://polyphon.ai/roadmap/) [![Discussions](https://img.shields.io/badge/Discussions-GitHub-black?logo=github&logoColor=white)](https://github.com/polyphon-ai/.github/discussions) [![Sponsor](https://img.shields.io/github/sponsors/coreydaley?logo=githubsponsors&logoColor=white&color=EA4AAA)](https://github.com/sponsors/coreydaley)
+
+<br>
+
 </div>
 
 ---
 
-<h3 align="center">All your voices, in one conversation</h3>
+<h3 align="center">The whole ensemble</h3>
 
 | 🔑 API | 💻 CLI | 🏠 Local / custom |
 |:---:|:---:|:---:|
@@ -65,16 +65,3 @@ API keys are read from your shell environment and never leave the main process. 
 | **[vscode-polyphon](https://github.com/polyphon-ai/vscode-polyphon)** | VS Code extension — multi-voice AI conversations with code context awareness |
 | **[polyphon-js](https://github.com/polyphon-ai/polyphon-js)** | JavaScript/TypeScript SDK — connect to Polyphon from your own code |
 | **[polyphon-ai.github.io](https://github.com/polyphon-ai/polyphon-ai.github.io)** | Source for [polyphon.ai](https://polyphon.ai) — Hugo site with docs and blog |
-
----
-
-### Get started
-
-- **[Download Polyphon](https://polyphon.ai/#download)** — macOS, free
-- **[Documentation](https://polyphon.ai/docs/)** — installation, providers, sessions
-- **[Roadmap](https://polyphon.ai/roadmap/)** — what's shipped and what's coming
-
-### Get involved
-
-- **[Join a discussion](https://github.com/polyphon-ai/.github/discussions)** — questions, ideas, show and tell
-- **[GitHub Sponsors](https://github.com/sponsors/coreydaley)** — support development directly
